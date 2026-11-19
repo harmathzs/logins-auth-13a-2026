@@ -8,7 +8,7 @@ const { createCodeVerifier, createCodeChallenge } = require('./oauth-pkce')
 
 const app = express()
 const port = process.env.PORT || 3001
-const frontendUrl = process.env.FRONTEND_URL || 'htpt://localhost-5173'
+const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:5173'
 const backendUrl = process.env.BACKEND_URL || `http://localhost:${port}`
 const production = process.env.NODE_ENV === 'production'
 
