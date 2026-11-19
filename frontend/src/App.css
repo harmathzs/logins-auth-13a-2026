@@ -1,0 +1,83 @@
+.app-shell { min-height: 100vh; display: flex; flex-direction: column; }
+.site-header { height: 88px; padding: 0 7.5%; display: flex; align-items: center; gap: 70px; border-bottom: 1px solid #edf0f5; background: #fff; }
+.brand { display: flex; align-items: center; font-size: 21px; font-weight: 800; letter-spacing: -1px; }
+.brand > span:not(.brand-mark):not(.brand-dot) { color: #6471e8; }
+.brand-dot { color: #6471e8; }
+.brand-mark { width: 35px; height: 35px; margin-right: 10px; border-radius: 11px; display: grid; place-items: center; color: white; background: #6573eb; font-size: 17px; }
+nav { display: flex; align-items: center; gap: 34px; height: 100%; }
+nav a { display: flex; align-items: center; height: 100%; color: #7d8899; font-size: 14px; font-weight: 600; border-bottom: 2px solid transparent; }
+nav a.active { color: #25324a; border-bottom-color: #6876ed; }
+.nav-action { margin-left: auto; display: flex; align-items: center; gap: 9px; color: #53617a; font-size: 14px; font-weight: 700; }
+.nav-action svg { font-size: 19px; }
+.hero { flex: 1; width: min(1190px, 85%); margin: auto; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 70px; padding: 100px 0; }
+.eyebrow { color: #7180ee; font-size: 11px; font-weight: 700; letter-spacing: 1.8px; }
+.status-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #7785ef; margin-right: 7px; vertical-align: 1px; }
+h1 { letter-spacing: -2px; }
+.hero h1 { margin: 24px 0; font-size: clamp(38px, 4vw, 58px); line-height: 1.2; font-weight: 800; }
+.hero h1 span { color: #6877e9; }
+.hero-copy > p, .auth-card > p { color: #7c899c; line-height: 1.8; }
+.hero-copy > p { max-width: 470px; font-size: 16px; }
+.hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 24px; margin-top: 34px; }
+.button { border: 0; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; gap: 12px; padding: 15px 21px; font-size: 14px; font-weight: 700; }
+.button-primary { background: #6573e8; color: #fff; box-shadow: 0 8px 18px #6573e82b; }
+.button-primary:hover { background: #5261d6; }
+.action-note { color: #98a2b1; font-size: 13px; display: flex; align-items: center; gap: 7px; }
+.trusted { margin-top: 82px; display: flex; align-items: center; flex-wrap: wrap; gap: 24px; color: #9da7b7; font-size: 13px; font-weight: 700; }
+.trusted > span { width: 100%; font-size: 10px; letter-spacing: 1.5px; }
+.trusted div { display: flex; gap: 7px; align-items: center; }
+.trusted svg { font-size: 17px; }
+.hero-art { min-height: 390px; position: relative; display: grid; place-items: center; }
+.art-glow { position: absolute; width: 390px; max-width: 100%; aspect-ratio: 1; border-radius: 50%; background: #edf0ff; }
+.art-glow::before, .art-glow::after { content: ''; position: absolute; border: 1px solid #dfe4ff; border-radius: 50%; inset: -25px; }
+.art-glow::after { inset: -50px; opacity: .5; }
+.art-card { z-index: 1; width: 300px; padding: 30px; border-radius: 20px; background: white; box-shadow: 0 20px 70px #4857a020; }
+.art-icon, .card-icon { display: grid; place-items: center; color: #6877e9; background: #eef0ff; }
+.art-icon { width: 55px; height: 55px; border-radius: 16px; font-size: 26px; margin-bottom: 20px; }
+.art-line { height: 8px; border-radius: 5px; background: #e7eaf1; margin: 9px 0; }
+.art-line.wide { width: 60%; background: #d3d9e6; }
+.art-line.short { width: 40%; }
+.art-divider { height: 1px; background: #edf0f5; margin: 25px 0 18px; }
+.art-row { display: flex; align-items: center; gap: 10px; margin-top: 18px; }
+.art-row > span { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; background: #f4f6ff; color: #7784ec; }
+.art-row div { flex: 1; display: grid; gap: 4px; font-size: 11px; }
+.art-row small { color: #a7b0be; }
+.art-row > svg { color: #7fcbb1; }
+.floating-badge { z-index: 1; position: absolute; right: 0; bottom: 52px; border-radius: 12px; background: white; padding: 14px 18px; box-shadow: 0 10px 35px #4857a025; font-size: 12px; font-weight: 700; }
+.floating-badge svg { color: #69c8a9; vertical-align: middle; margin-right: 5px; }
+.centered-page { flex: 1; display: grid; place-items: center; padding: 70px 20px; }
+.auth-card { width: min(100%, 450px); padding: 42px; border: 1px solid #edf0f5; border-radius: 20px; background: #fff; box-shadow: 0 15px 55px #293e7110; text-align: center; }
+.card-icon { width: 56px; height: 56px; margin: 0 auto 24px; border-radius: 17px; font-size: 25px; }
+.auth-card h1 { margin: 12px 0; font-size: 30px; }
+.auth-card > p { margin: 0 auto 25px; font-size: 14px; }
+.auth-card .signed-in { font-size: 13px; color: #6877e9; }
+.signed-in a { text-decoration: underline; }
+.provider-list { display: grid; gap: 12px; }
+.provider-button { min-height: 54px; border: 1px solid #e8ebf1; border-radius: 10px; display: flex; align-items: center; padding: 0 16px; font-size: 14px; font-weight: 700; transition: border-color .2s, background .2s; }
+.provider-button:hover { border-color: #aeb8f6; background: #fafaff; }
+.provider-button > svg:first-child { font-size: 20px; width: 24px; }
+.provider-button span { flex: 1; }
+.provider-button.facebook > svg:first-child { color: #1877f2; }
+.provider-button.google > svg:first-child { color: #4285f4; }
+.provider-button.salesforce > svg:first-child { color: #00a1e0; font-size: 25px; }
+.provider-arrow { color: #aab4c2; }
+.card-footnote { margin-top: 28px; color: #a0aabb; font-size: 12px; display: flex; align-items: center; justify-content: center; gap: 7px; }
+.profile-details { text-align: left; margin: 28px 0; border-top: 1px solid #edf0f5; }
+.profile-details div { display: flex; justify-content: space-between; gap: 20px; padding: 16px 0; border-bottom: 1px solid #edf0f5; font-size: 13px; }
+.profile-details span { color: #98a2b1; }
+.profile-details strong { overflow-wrap: anywhere; text-align: right; }
+.button-outline { color: #6573e8; background: #f1f3ff; }
+footer { display: flex; justify-content: space-between; gap: 20px; padding: 25px 7.5%; border-top: 1px solid #edf0f5; color: #a5aebb; font-size: 12px; }
+.footer-spark { color: #8995ed; }
+@media (max-width: 760px) {
+  .site-header { height: 72px; padding: 0 5%; gap: 20px; }
+  nav { gap: 16px; margin-left: auto; }
+  .nav-action { margin-left: 0; }
+  .nav-action span { display: none; }
+  .hero { width: 88%; grid-template-columns: 1fr; gap: 20px; padding: 70px 0; }
+  .hero-art { min-height: 350px; overflow: hidden; }
+  .art-glow { width: 290px; }
+  .floating-badge { right: 5%; bottom: 20px; }
+  .trusted { margin-top: 50px; }
+  .auth-card { padding: 32px 24px; }
+  footer { flex-wrap: wrap; }
+}
