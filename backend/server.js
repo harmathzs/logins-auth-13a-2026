@@ -8,7 +8,7 @@ const { createCodeVerifier, createCodeChallenge } = require('./oauth-pkce')
 
 const app = express()
 const port = process.env.PORT || 3001
-const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:5173'
+const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:5173' 
 const backendUrl = process.env.BACKEND_URL || `http://localhost:${port}`
 const production = process.env.NODE_ENV === 'production'
 
@@ -49,7 +49,7 @@ app.disable('x-powered-by')
 if (process.env.TRUST_PROXY === '1') app.set('trust proxy', 1)
 app.use(cors({ origin: frontendUrl, credentials: true }))
 app.use(session({
-  secret: proces.env.SESSION_SECRET,
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false,
   cookie: { httpOnly: true, sameSite: 'lax', secure: production, maxAge: 24 * 60 * 60 * 1000 },
@@ -67,7 +67,7 @@ function redirectError(res, error) {
   res.redirect(`${frontendUrl}/login?error=${encodeURIComponent(error)}`)
 }
 
-app.GET('/api/session', (req, res) => {
+app.get('/api/session', (req, res) => {
   res.set('Cache-Control', 'no-store').json({ user: req.session.user || null })
 })
 
@@ -169,4 +169,4 @@ app.get('/auth/:provider/callback', async (req, res) => {
   }
 })
 
-app.list(port, console.log(`API listening on port ${port}`))
+app.listen(port, console.log(`API listening on port ${port}`))
